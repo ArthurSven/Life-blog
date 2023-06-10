@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Life blog</string>
+    <string name="home">Home</string>
+    <string name="news">News</string>
+    <string name="account">Account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="today_s_news">Today\'s News</string>
+    <string name="user_section">User Section</string>
+    <string name="available_blogs">Available Blogs</string>
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
+    <string name="signuptV">Signup</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+</resources>

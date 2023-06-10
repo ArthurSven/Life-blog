@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+<item android:id="@+id/home"
+    android:title="@string/home"
+    android:icon="@drawable/ic_action_home"/>
+    <item android:id="@+id/news"
+        android:title="@string/news"
+        android:icon="@drawable/ic_action_news"/>
+    <item android:id="@+id/user"
+        android:title="@string/account"
+        android:icon="@drawable/ic_action_user"/>
+</group>
+</menu>

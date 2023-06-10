@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1066724686113",
+    "project_id": "life-blog-d2fcd",
+    "storage_bucket": "life-blog-d2fcd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066724686113:android:34a50b39a04e7c42a82660",
+        "android_client_info": {
+          "package_name": "com.devapps.lifeblog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG6vGmtNMfflCYtXrWN197K4S7FL_jKxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
