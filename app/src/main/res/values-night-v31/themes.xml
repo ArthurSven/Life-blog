@@ -1,5 +1,6 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
     <style name="Theme.LifeBlog" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/turquoise</item>
@@ -12,11 +13,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/turquoise</item>
         <!-- Customize your theme here. -->
+        <item name="windowSplashScreenBackground">@color/turquoise</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/lebensblog</item>
+        <item name="android:windowSplashScreenAnimationDuration">3000</item>
     </style>
-    <!-- Splash screen theme -->
-    <style name="Splasher" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_image</item>
-        <item name="android:statusBarColor">@color/turquoise</item>
-    </style>
-
 </resources>

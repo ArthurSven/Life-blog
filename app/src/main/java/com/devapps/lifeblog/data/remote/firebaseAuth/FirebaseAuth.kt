@@ -69,5 +69,20 @@ import kotlinx.coroutines.withContext
         return auth.currentUser
     }
 
+     fun resetPassword(email: String, onComplete: (Boolean, String?) -> Unit) {
+         CoroutineScope(Dispatchers.IO).launch {
+             try {
+                 auth.sendPasswordResetEmail(email).await()
+                 withContext(Dispatchers.Main) {
+                     onComplete(true, null)
+                 }
+             } catch (e: Exception) {
+                 withContext(Dispatchers.Main) {
+                     onComplete(false, e.message)
+                 }
+             }
+         }
+     }
+
 
 }

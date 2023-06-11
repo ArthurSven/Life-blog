@@ -2,6 +2,7 @@ package com.devapps.lifeblog.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
@@ -22,7 +23,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModel: NewsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Splasher)
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_LifeBlog)
+
         setContentView(R.layout.activity_main)
 
         val newsRepository = NewsRepository(ArticleDatabase(this))

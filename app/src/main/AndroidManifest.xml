@@ -22,7 +22,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".views.SplashscreenActivity"
+            android:name=".views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,10 +34,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".views.MainActivity"
-            android:exported="true" />
         <activity android:name=".views.User.UserSignupActivity"
+            android:exported="true"/>
+        <activity android:name=".views.User.UserHomeActivity"
+            android:exported="true"/>
+        <activity android:name=".views.User.PasswordResetActivity"
             android:exported="true"/>
     </application>
 

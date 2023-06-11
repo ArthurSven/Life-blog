@@ -1,5 +1,6 @@
 package com.devapps.lifeblog.views.User
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Message
 import android.widget.Toast
@@ -24,6 +25,10 @@ class UserSignupActivity : AppCompatActivity() {
         binding = ActivitySignupuserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.loginLink.setOnClickListener {
+            val intent = Intent(this, UserLoginActivity::class.java)
+            startActivity(intent)
+        }
         binding.userRegister.setOnClickListener {
             signupUser()
         }
