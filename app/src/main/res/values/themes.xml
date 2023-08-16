@@ -3,5 +3,6 @@
 
     <style name="Theme.Lifeblog" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@color/azure</item>
+        <item name="android:colorPrimary">@color/azure</item>
     </style>
 </resources>

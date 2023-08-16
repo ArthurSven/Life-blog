@@ -10,8 +10,13 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
@@ -25,8 +30,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.devapps.lifeblog.views.components.BlogNavigation
+import com.devapps.lifeblog.views.components.BottomNavItem
+import com.devapps.lifeblog.views.components.BottomNavigationBar
 import kotlinx.coroutines.delay
 
 
@@ -52,11 +62,34 @@ fun Navigation() {
         }
 
         composable("homescreen") {
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
+            val navController1 = rememberNavController()
+            Scaffold(
+                bottomBar = {
+                    BottomNavigationBar(
+                        items = listOf(
+                            BottomNavItem(
+                                name = "Home",
+                                route = "home",
+                                icon = Icons.Default.Home
+                            ),
+                            BottomNavItem(
+                                name = "News",
+                                route = "news",
+                                icon = Icons.Default.List
+                            ),
+                            BottomNavItem(
+                                name = "Account",
+                                route = "account",
+                                icon = Icons.Default.Person
+                            )
+                        ),
+                        navController = navController1,
+                        onItemClick = {
+                            navController1.navigate(it.route)
+                        })
+                }
             ) {
-                Text(text = "Life blog")
+                    BlogNavigation(navController = navController1)
             }
         }
     }
@@ -87,10 +120,12 @@ fun SplashScreen(navController: NavController) {
             .fillMaxSize()
             .background(azureColor())
     ) {
-        Image(
-            painter = painterResource(id = R.drawable.lebensblog),
-            contentDescription = "logo",
-            modifier = Modifier.scale(scale.value)
+        Text(
+            text = "LIFE BLOG",
+            fontWeight = FontWeight.Bold,
+            fontSize = 26.sp,
+            color = Color.White,
+            fontFamily = FontFamily.SansSerif
         )
     }
 }
