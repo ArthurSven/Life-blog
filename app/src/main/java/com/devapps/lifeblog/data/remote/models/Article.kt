@@ -1,6 +1,7 @@
-package com.devapps.lifeblog.data.remote.responses
+package com.devapps.lifeblog.data.remote.models
+import java.io.Serializable
 
-data class ArticleX(
+data class Article(
     val author: String,
     val content: String,
     val description: String,
@@ -9,4 +10,4 @@ data class ArticleX(
     val title: String,
     val url: String,
     val urlToImage: String
-)
+) : Serializable

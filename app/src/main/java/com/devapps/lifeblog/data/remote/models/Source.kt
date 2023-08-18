@@ -1,4 +1,4 @@
-package com.devapps.lifeblog.data.remote.responses
+package com.devapps.lifeblog.data.remote.models
 
 data class Source(
     val id: String,

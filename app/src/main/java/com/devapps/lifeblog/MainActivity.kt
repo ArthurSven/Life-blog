@@ -37,9 +37,10 @@ import androidx.navigation.NavController
 import com.devapps.lifeblog.views.components.BlogNavigation
 import com.devapps.lifeblog.views.components.BottomNavItem
 import com.devapps.lifeblog.views.components.BottomNavigationBar
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 
-
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

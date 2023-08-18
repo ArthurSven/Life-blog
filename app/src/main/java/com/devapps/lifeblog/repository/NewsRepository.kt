@@ -1,19 +1,15 @@
 package com.devapps.lifeblog.repository
 
-import com.devapps.lifeblog.data.remote.ArticleApi
-import dagger.hilt.android.scopes.ActivityScoped
+import com.devapps.lifeblog.data.remote.api.NewsApi
+import com.devapps.lifeblog.data.remote.models.Article
+import com.devapps.lifeblog.data.remote.models.NewsResponse
 import javax.inject.Inject
 
-@ActivityScoped
 class NewsRepository @Inject constructor(
-    private val api: ArticleApi
+    private val newsApi: NewsApi
 ) {
-    suspend fun getArticleList(countryCode: String, pageNumber: Int) {
-        val response = try {
-            api.getNews(countryCode, pageNumber)
-        } catch (e: Exception) {
 
-        }
+    suspend fun getNewsArticles() :List<Article> {
+        return newsApi.getNewsArticle()
     }
-
 }
